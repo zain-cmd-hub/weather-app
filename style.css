@@ -1,0 +1,250 @@
+/* Import Google Font - Open Sans */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+/* Reset default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+/* Body Styling */
+body {
+  background-image: url(sky.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: #ffffff;
+}
+
+/* Main Heading */
+h1 {
+  color: #fff;
+  padding: 18px 0;
+  text-align: center;
+  font-size: 1.75rem;
+  background: #0cb9a2;
+}
+
+/* Layout Container */
+.container {
+  display: flex;
+  gap: 35px;
+  padding: 30px;
+  color: #f3f5f6;
+  font-size: x-large;
+}
+
+/* Input Section */
+.weather-input {
+  width: 50%;
+}
+
+.weather-input input {
+  width: 100%;
+  height: 46px;
+  outline: none;
+  padding: 0 15px;
+  margin: 10px 0 20px;
+  font-size: 1.07rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+/* Separator Line */
+.weather-input .separator {
+  height: 1px;
+  width: 100%;
+  margin: 25px 0;
+  background: #D8BFD8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.weather-input .separator::before {
+  content: "or";
+  color: #fff;
+  font-size: 1.18rem;
+  padding: 0 15px;
+  margin-top: -4px;
+  background: #4c056a;
+}
+
+/* Buttons */
+.weather-input button {
+  width: 100%;
+  padding: 10px 0;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  color: #fff;
+  font-size: 1rem;
+  border-radius: 4px;
+  background: #4c056a;
+}
+
+/* Location Button */
+.weather-input .location-btn {
+  background: #4c056a;
+}
+
+/* Weather Display Section */
+.weather-data {
+  width: 100%;
+}
+
+/* Current Weather */
+.current-weather {
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 5px;
+  padding: 20px 70px 20px 20px;
+  background: #4c056a;
+}
+
+.current-weather h2 {
+  font-size: 1.7rem;
+}
+
+.weather-data h4 {
+  margin-top: 12px;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.current-weather .icon {
+  text-align: center;
+}
+
+.current-weather .icon img {
+  max-width: 120px;
+  margin-top: -15px;
+}
+
+.current-weather .icon h4 {
+  margin-top: -10px;
+  text-transform: capitalize;
+}
+
+/* Forecast Section */
+.days-forecast h2 {
+  font-size: xx-large;
+  margin: 20px 0;
+  color: #000;
+}
+
+.weather-cards {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.weather-cards .card {
+  list-style: none;
+  color: #fff;
+  padding: 18px 16px;
+  border-radius: 5px;
+  background: #4c056a;
+  width: calc(100% / 5);
+}
+
+.weather-cards .card img {
+  max-width: 70px;
+  margin: 5px 0 -12px;
+}
+
+/* Media Queries */
+@media (max-width: 1400px) {
+  .weather-data .current-weather {
+    padding: 20px;
+  }
+
+  .weather-cards .card {
+    width: calc(100% / 4 - 15px);
+  }
+}
+
+@media (max-width: 1200px) {
+  .weather-cards .card {
+    width: calc(100% / 3 - 15px);
+  }
+}
+
+@media (max-width: 950px) {
+  .weather-input {
+    width: 450px;
+  }
+
+  .weather-cards .card {
+    width: calc(100% / 2 - 10px);
+  }
+}
+
+@media (max-width: 750px) {
+  .container {
+    flex-wrap: wrap;
+    padding: 15px;
+  }
+
+  .weather-input {
+    width: 100%;
+  }
+}
+
+/* Temperature Unit Toggle Styling */
+.unit-toggle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 20px;
+  justify-content: center;
+}
+
+/* Toggle Switch */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  background-color: #000000;
+  transition: 0.4s;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 24px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #b119f1;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
