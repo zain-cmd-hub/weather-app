@@ -11,7 +11,7 @@ A responsive weather dashboard that lets users search for current weather and a 
 
 ## 🛠️ Technologies Used
 - HTML5
-- CSS3 (with media queries for responsiveness)
+- CSS (with media queries for responsiveness)
 - JavaScript (Vanilla)
 - OpenWeatherMap 
 
